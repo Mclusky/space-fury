@@ -478,6 +478,7 @@ var GF = function() {
     scoreBetweenBoss = 0;
     enemy.speed = 100;
     enemyArray = [];
+    boss.speed = 100;
     bigBoss = [];
     bossShots = [];
     bossesKilled = 0;
