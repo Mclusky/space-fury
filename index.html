@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles/css/game-styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <title>Space Fury</title>
+</head>
+
+<body>
+  <div id="display-container">
+    <div id="canvasContainer">
+      <canvas id="myCanvas" width="1000" height="600">Your browser does not support the canvas element.</canvas>
+    </div>
+    <aside id="side-info">
+      <div id="player-info">
+        <div id="scoreSheet">
+          <h1>SCORE</h1></div><br /><br />
+        <div id="ships-left"></div>
+        <div id="sliders">
+          <label for="fps"><h1>ENEMY SPEED : </h1></label><br /><br />
+          <input id="fps" type="range" min="100
+          " max="250" value="100" step="50" />
+          <output name="frames">
+          </output>
+        </div><br />
+        <section id="sfx">
+          <h1>SOUND EFFECTS</h1><br />
+          <div class="effects">
+            <label for="music"><h2>MUSIC :</h2></label><br />
+            <input id="music" type="range" min="0" max="1" value="0.8" step="0.1" />
+          </div><br />
+          <div class="effects">
+            <label for="blue-shots"><h2>SHIP LASER :</h2></label><br />
+            <input id="blue-shots" type="range" min="0" max="1" value="0.8" step="0.1" />
+          </div><br />
+          <div class="effects">
+            <label for="red-shots"><h2>ENEMY LASER : </h2></label><br />
+            <input id="red-shots" type="range" min="0" max="1" value="0.8" step="0.1" />
+          </div><br />
+          <div class="effects">
+            <label for="destruction"><h2>EXPLOSIONS : </h2></label><br />
+            <input id="destruction" type="range" min="0" max="1" value="0.8" step="0.1" />
+          </div><br />
+        </section>
+      </div>
+    </aside>
+    <aside id="end-credits">
+      <div id="top-score">
+        <h1>FINAL SCORE</h1></div>
+      <video id="myVideo" width="120" height="80">Your browser does not support the video element</video>
+      <canvas id="snapshot" width="120" height="80">Your browser does not support the canvas element</canvas><br />
+      <p>
+        Use Camera
+      </p>
+      <button id="start-camera">START</button>
+      <button id="stop-camera">STOP</button><br />
+      <button id="face-photo">TAKE PHOTO</button><br />
+      <p>
+        Or Upload File
+      </p>
+      <div id="input-container">
+        <label for="file">Here</label><br />
+        <input id="file" type="file" onchange="readFileAndDraw(this.files);" />
+      </div>
+      <form id="ranking" action="" method="post" autocomplete="off">
+        <label for="name">ENTER YOUR NAME</label><br />
+        <input id="name" type="text" pattern="[a-zA-Z0-9]{3}" required placeholder="ex: gR6" /><br />
+        <button id="save" type="button" disabled>SAVE</button>
+      </form>
+    </aside>
+  </div>
+  </div>
+  <script src="js/howler.min.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/display.js"></script>
+  <script src="js/ships.js"></script>
+  <script src="js/graphics.js"></script>
+  <script src="js/time-based-animations.js"></script>
+  <script src="js/fps.js"></script>
+  <script src="js/listeners.js"></script>
+  <script src="js/collisions.js"></script>
+  <script src="js/sfx.js"></script>
+  <script src="js/photo.js"></script>
+  <script src="js/storage.js"></script>
+</body>
+
+</html>
