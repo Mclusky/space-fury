@@ -35,14 +35,6 @@ AUTHORS
 
 Chris Lebon- Initial work - [Mclusky](https://github.com/Mclusky)
 
-
-*************
-CONTRIBUTING
-*************
-
-I didn't plan on making changes to the game (since I'll be adding it to my portfolio) but if you really fancy changing/improving stuff, please let me know and I'll mae sure we can do so.
-
-
 *********
 CREDITS
 *********
