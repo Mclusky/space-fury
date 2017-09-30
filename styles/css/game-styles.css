@@ -49,6 +49,9 @@ html, body {
 
 #display-container {
   position: relative; }
+  @media screen and (max-width: 1152px) {
+    #display-container {
+      overflow-y: hidden; } }
 
 h1 {
   font-size: 1.1em; }
